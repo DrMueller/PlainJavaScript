@@ -11,12 +11,21 @@ module.exports = {
     },
     mode: 'development',
     plugins: [
-        new HtmlWebpackPlugin(
-            {
-                title: 'Plain Java Script',
-                template: 'index.html'
-              }
-        )
+        new HtmlWebpackPlugin({
+            title: 'Main',
+            filename: 'index.html',
+            template: __dirname + '/src/infrastructure/app-main/index.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Individuals',
+            filename: 'individuals.html',
+            template: __dirname + '/src/areas/individuals/components/individuals-overview/individuals-overview.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Hello World',
+            filename: 'hello-world.html',
+            template: __dirname + '/src/areas/hello-world/components/hello-world/hello-world.html'
+        }),
     ],
     module: {
         rules: [

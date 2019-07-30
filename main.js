@@ -1,4 +1,6 @@
-import './src/styles/app.css';
-import { App } from './src/js/services/app.js';
+// Areas
+import './src/areas/individuals/components/individuals-overview/individuals-overview';
+import './src/areas/hello-world/components/hello-world/hello-world';
 
-new App().start();
+// Infrastructure
+import './src/infrastructure/app-main/index.css';
